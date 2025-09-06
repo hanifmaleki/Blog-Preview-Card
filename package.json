@@ -1,0 +1,51 @@
+{
+  "name": "blog-preview-card",
+  "version": "1.0.0",
+  "description": "This HTML & CSS-only challenge is a perfect project for beginners getting up to speed with HTML and CSS fundamentals, like HTML structure and the box model.",
+  "keywords": [
+    "blog-preview",
+    "frontend-mentor",
+    "frontend-learning"
+  ],
+  "homepage": "https://github.com/hanifmaleki/Blog-Preview-Card#readme",
+  "bugs": {
+    "url": "https://github.com/hanifmaleki/Blog-Preview-Card/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanifmaleki/Blog-Preview-Card.git"
+  },
+  "license": "ISC",
+  "author": "Hanif Maleki hanif_1362@yahoo.com",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass src/scss:dist/css",
+    "pug": "node build-pug.js",
+    "copy-js-assets": "copy-files-from-to --when-file-exists overwrite",
+    "watch-scss": "chokidar 'src/scss/**/*.scss' -c 'npm run scss'",
+    "watch-pug": "chokidar 'src/pug' 'assets' -c 'npm run pug'",
+    "watch-js-assets": "chokidar 'src/js assets' -c 'npm run copy-js-assets'",
+    "scss:build": "sass src/scss:dist/css --style=compressed",
+    "dev": "concurrently 'npm run watch-scss' 'npm run watch-pug' 'npm run watch-js-assets' 'live-server dist'",
+    "build": "npm run scss:build && npm run pug && npm run copy-js-assets"
+  },
+  "copyFiles": [
+    {
+      "from": "src/js",
+      "to": "dist"
+    },
+    {
+      "from": "assets",
+      "to": "dist/assets"
+    }
+  ],
+  "dependencies": {
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^9.2.1",
+    "copy-files-from-to": "^3.12.1",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.92.0"
+  }
+}

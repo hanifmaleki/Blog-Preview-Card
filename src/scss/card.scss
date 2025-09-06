@@ -1,0 +1,75 @@
+@use 'variables';
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    margin-block-start: clamp(12rem, 14vw, 22rem);
+    padding: 1.25rem;
+    max-width: 25rem;
+    border: 1px solid variables.$gray-950;
+    border-radius: 2rem;
+    box-shadow: variables.$gray-950 0.5rem 0.5rem;
+    background-color: variables.$white;
+}
+
+.card-image-container {
+    overflow: hidden;
+    border-radius: 1.5rem;
+    width: 100%;
+}
+
+.card-image {
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-category {
+    padding: 0.3rem;
+    border-radius: 0.4rem;
+    font-size: variables.$fs-xxs;
+    font-weight: 700;
+    background-color: variables.$yellow;
+}
+
+.card-date {
+    font-size: variables.$fs-xxs;
+}
+
+.card-title {
+    font-size: variables.$fs-sm;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:hover {
+        color: variables.$yellow;
+    }
+}
+
+.card-description {
+    color: variables.$gray-500;
+    padding-bottom: 1rem;
+    line-height: variables.$lh-base;
+}
+
+.card-author-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-author-image {
+    width: 2rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-author-name {
+    font-weight: 600;
+}
+
+
